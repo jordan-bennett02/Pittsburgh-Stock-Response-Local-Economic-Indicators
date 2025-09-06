@@ -2,7 +2,7 @@ Pittsburgh Stock Health Read Me
 
 This repository contains various Jupyter notebooks for a data science project that analyzes the effect on local Pittsburgh economic variables like Unemployment and Median Home values on stock prices that have are geographically associated with the Pittsburgh Region. In particular, we analyze the stocks 'PNC' (Pittsburgh National Corporation - a bank), 'PPG' (Pittsburgh Plate and Glass - paint and oil products), and 'EQT' (formerly Equitable Resources - a natural gas company) with and without the effect of our local variables.
 
-We employ a variety of models to measure the association between geographic economic data and our target stock changes including SARIMAX models, Tree based models and LSTMs. Our goal is to measure the model performance in forecasting stock data for the last year based on data from 2020. We use the metrics of RMSE and Max Absolute Error to measure our the model performance.
+We employ a variety of models to measure the association between geographic economic data and our target stock changes including SARIMAX models, Tree based models and LSTMs. Our goal is to measure the model performance in forecasting stock data for the last year based on data from 2000. We use the metrics of RMSE and Max Absolute Error to measure our the model performance.
 
 In our first notebook, Data_Collection_and_Preprocessing, we collect, organize and format our data into a dataframe. We use the yfinance API to collect our stock data, and the monthly unemployment rate in the Pittsburgh Region. Median home price is downloaded from Zillow at: https://www.zillow.com/research/data/?msockid=17d3ea0fafc060ec0404f861aed261f0. In particular, we decide to structure the data monthly and by percent change from the previous month. While this decision reduces the size of our dataset substantially, it also aligns our stock values with our monthly economic data. 
 
@@ -11,5 +11,6 @@ In our second notebook, we model each of our stock variables with a standard ARI
 In our third notebook, we utilize random forest methods in an attempt to capture nonlinear relationships among our exogenous variables and stock prices. We also model our stocks with a SARIMAX / RF hybrid method in an attempt to improve our evaluation metrics.
 
 In the last notebook, we model stocks using LSTMs. 
+
 
 Note: It should be clear from the evaluation criterion of a 12 month forecast that we are not attempting to utilize our forecasts for stock prediction. Generally forecasting methods model a much smaller timeframe in an attempt to predict stock behavior. Our goal was to assess the effect of our exogenous variables on our stock changes.
