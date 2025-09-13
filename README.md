@@ -63,5 +63,12 @@
 |XGBoost | 6.8543 | 11.1830 | XGBoost | 4.8892 | 10.8080 | XGBoost | 7.9255 | 15.2462 |
 |XGBoost with Ex | 6.5239 | 9.7682 | XGBoost with Ex | 4.7554 | 9.7492 | XGBoost with Ex | 8.2230 | 15.6964 |
 |SARIMAX with XGB Residuals | 6.3010 | 10.5845 | SARIMAX with XGB Residuals | 4.5666 | 9.5830 | SARIMAX with XGB Residuals | 7.7831 | 15.6453 |
-|**LSTM** | 5.7627 | **9.5701** | **LSTM** | **4.2794** | 10.0447 | LSTM | 6.6195 | 12.8124 |
-|**LSTMX** | **5.2856** | 9.7363 | **LSTMX** | 4.3353 | **9.1738** | LSTMX | 6.8866 | 12.7954 |
+|**LSTM** | 5.7627 | **9.5701** | **LSTM** | **4.2794** | 10.0447 | **LSTM** | **6.6195** | 12.8124 |
+|**LSTMX** | **5.2856** | 9.7363 | **LSTMX** | 4.3353 | **9.1738** | **LSTMX** | 6.8866 | **12.7954** |
+
+------------------------------------------------------
+# Results
+- Overall, we find that both of the LSTM models have the best performance metrics with respect to all stocks.
+------------------------------------------------------
+# Future Improvements
+- 
