@@ -37,4 +37,14 @@
 
   ---------------------------------------------------
   # Model Buildling
-  
+  - Before any modeling, we applied the Augmented Dickey-Fuller test in order to deduce that our data was more than likely sampled from a stationary process. We also deduced from the ACF and PACF plots the most statistically viable parameters for our SARIMAX family of models. Each of our stock variables were most appropriately modeled only using autoregressive parameters. We utilized these parameters for our first three models: ARIMA, SARIMA and SARIMAX.
+ 
+  - Because of the apparent seasonality in our unemployment and housing price data, we also seasonally differenced each of our stock variables and examined the ACF and PACF plots for these series to determine our seasonal parameters (P,D,Q,s) for the SARIMA and SARIMAX models.
+ 
+  - For our tree based models, we needed to encode the time series structure into the dataset for improved forecasting. We opted to include lag data that covered the spectrum of our statistically significant autoregressive terms, namely a t-1 and t-2 lag as well as a t-12 lag to capture any yearly seasonal trends in the data. We ran RandomForestRegression and XGBoost twice for each stock, once with only the stock data and another with the included exogenous variables. We also tuned hyperparameters for each model using gridsearch.
+ 
+  - In an attempt to experiment, we also created a hybrid model utilizing the best SARIMAX parameters and XGBoost. We first modeled the data using SARIMAX, and then modeled the residuals of the data using XGBoost. This mildly improved the performance of our SARIMAX models.
+ 
+  - Our final family of models were LSTMS trained on the stock data, with the same lag parameters as our tree based family. As before, we modeled first only the stock data and then included the data from our exogenous variables. Unsurprisingly, this family of models performed the best and even had relatively good forecasts for the beginning of the target period.
+ 
+  - The metrics we utilized to gauge each model was the RMSE and the Max Absolute Error. 
