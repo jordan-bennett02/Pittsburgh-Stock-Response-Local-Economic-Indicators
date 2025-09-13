@@ -28,12 +28,12 @@
 - Looking at the raw variables we see large fluctuations during the 2008 financial crisis and COVID 19 pandemic. We also see stock volatility during the 2022 invasion of Ukraine by Russia.
 
 - Both of the monthly unemployment data and median home prices exhibited some yearly seasonality as shown via the small uniform fluctuations in the graph below.
-  !(Stocks, Unemployment, Median Home Prices)[https://github.com/jordan-bennett02/Pittsburgh-Stock-Response-Local-Economic-Indicators/blob/main/history_COVID_19.png]
+  ![Stocks, Unemployment, Median Home Prices](https://github.com/jordan-bennett02/Pittsburgh-Stock-Response-Local-Economic-Indicators/blob/main/history_COVID_19.png)
 
 - After processing our data to a uniform scale and differencing, we see that the data is relatively normal disregarding a few outliers.
-  !(QQ Plots)[https://github.com/jordan-bennett02/Pittsburgh-Stock-Response-Local-Economic-Indicators/blob/main/qq_plot_normality.png]
+  ![QQ Plots](https://github.com/jordan-bennett02/Pittsburgh-Stock-Response-Local-Economic-Indicators/blob/main/qq_plot_normality.png)
 - Before beginning modeling, we utilized the ACF and PACF plots to select parameters for our SARIMAX model family as well as what lag features we should include for our other models.
-  !(ACF/PACF Plots for PNC)[https://github.com/jordan-bennett02/Pittsburgh-Stock-Response-Local-Economic-Indicators/blob/main/ACF_PACF_Stocks.png]
+  ![ACF/PACF Plots for PNC](https://github.com/jordan-bennett02/Pittsburgh-Stock-Response-Local-Economic-Indicators/blob/main/ACF_PACF_Stocks.png)
 
   ---------------------------------------------------
   # Model Buildling
