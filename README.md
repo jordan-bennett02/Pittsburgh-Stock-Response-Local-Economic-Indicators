@@ -46,5 +46,9 @@
   - In an attempt to experiment, we also created a hybrid model utilizing the best SARIMAX parameters and XGBoost. We first modeled the data using SARIMAX, and then modeled the residuals of the data using XGBoost. This mildly improved the performance of our SARIMAX models.
  
   - Our final family of models were LSTMS trained on the stock data, with the same lag parameters as our tree based family. As before, we modeled first only the stock data and then included the data from our exogenous variables. Unsurprisingly, this family of models performed the best and even had relatively good forecasts for the beginning of the target period.
+    ![EQT LSTM with Exogenous Variables](https://github.com/jordan-bennett02/Pittsburgh-Stock-Response-Local-Economic-Indicators/blob/main/EQT%20LSTM.png)
  
-  - The metrics we utilized to gauge each model was the RMSE and the Max Absolute Error. 
+  - The metrics we utilized to gauge each model was the RMSE and the Max Absolute Error. Beacuse we are modeling percent change in stock values, these metrics aren't the most appropriate metrics to utilize if our models were used for forecasting and profit maximization. You can see in the graph above while the model captures the trend of the data, mathematically it is more important for the model to predict the sign of the percent change. If one wanted to use the above modeling for forecasting for profit maximization, a more viable metric would be a weighted sum of indicator functions that return 1 when the sign on the prediction matches the actual percent change with 0 otherwise. One would want to use the model that maximizes this metric. For our purposes, we seek only to compare the performance of each model with and without the presence of these exogenous variables and so an an average metric seems the most appropriate. We also compute the maximum error for each model.
+ 
+----------------------------------------------------
+# Model Performance
