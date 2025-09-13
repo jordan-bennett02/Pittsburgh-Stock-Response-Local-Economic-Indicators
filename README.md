@@ -69,6 +69,10 @@
 ------------------------------------------------------
 # Results
 - Overall, we find that both of the LSTM models have the best performance metrics with respect to all stocks.
+
+- For PNC stock, we find that increasing model complexity tends to increase model performance. Inclusion of exogenous variables and incorporating seaonal data tends to improve model performance, suggesting a direct relationship between our exogenous variables and stock price. My hypothesis is that the financial industry has a more direct response to global economic data, which is reflected in our local variables.
+
+- PPG and EQT had a worse response to introduction of exogenous variables and induced seasonal trends. Since the performance of these businesses is depends more on commodity prices, we suspect that the effect of our local economic variables are only related through a dispered effect throughout the stock market performance. To improve model accuracy in this case, we suspect including commodity prices of natural gas and oil.
 ------------------------------------------------------
 # Future Improvements
-- 
+- Because of the response of EQT and PPG stocks to our local attributes, we suspect that we can improve base model performance by incorporating commodity prices instead. I'd like to implement this.
